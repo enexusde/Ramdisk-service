@@ -18,7 +18,7 @@ read sizegb
 mkdir $RDIR
 cp -rf * $RDIR
 cd $RDIR
-sudo chmod +x createramdisk openramdisk closeramdisk deleteramdisk
+sudo chmod +x createramdisk.sh openramdisk.sh closeramdisk.sh deleteramdisk.sh
 sudo ./createramdisk
 sudo systemctl enable ramdisk.service
 sudo systemctl start ramdisk.service
