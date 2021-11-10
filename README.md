@@ -1,6 +1,6 @@
 # TL;DR How to install?
 ```
-  wget https://github.com/enexusde/Ramdisk-service/archive/refs/heads/main.zip && unzip main.zip && cd Ramdisk-service-main/ && chmod +x install.sh && sudo ./install.sh
+  wget https://github.com/enexusde/Ramdisk-service/archive/refs/heads/main.zip && unzip -o main.zip && cd Ramdisk-service-main/ && chmod +x install.sh && sudo ./install.sh
 ```
 
 # Ramdisk-service
