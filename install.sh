@@ -14,7 +14,12 @@ if [ "$dir" != "" ] ;then
 fi
 
 if [ -d "$RDIR" ]; then
-  echo "Directory already exists. Cancel!"
+  echo "Directory already exists. Do you like to uninstall the Ramdisk-Service [y/n]?: "
+  read deleterds
+  if [ "$deleterds" != "y" ] ;then
+    rm -rf $RDIR
+    rm /etc/systemd/system/ramdisk.service
+  fi  
   exit 1
 fi
 
