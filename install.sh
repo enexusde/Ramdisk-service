@@ -20,7 +20,7 @@ fi
 
 echo -n "How many gigabyte you like the ramdisk to be?: "
 read sizegb
-
+echo "export RDSIZEGB=$sizegb" >> setenv.sh
 mkdir $RDIR
 cp -rf * $RDIR
 cd $RDIR
