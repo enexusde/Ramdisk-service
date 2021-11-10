@@ -1,0 +1,14 @@
+[Unit]
+Description=Ramdisk
+After=syslog.target
+Requires=local-fs.target
+After=local-fs.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/root/openramdisk
+ExecStop=/root/closeramdisk
+
+[Install]
+WantedBy=graphical.target
