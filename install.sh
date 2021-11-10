@@ -24,6 +24,7 @@ read sizegb
 mkdir $RDIR
 cp -rf * $RDIR
 cd $RDIR
+cp ramdisk.service /etc/systemd/system
 sudo chmod +x createramdisk.sh openramdisk.sh closeramdisk.sh deleteramdisk.sh
 sudo ./createramdisk
 sudo systemctl enable ramdisk.service
