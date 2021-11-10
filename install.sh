@@ -1,4 +1,13 @@
 #!/bin/bash
+
+
+if [ -d "/etc/systemd/system" ]; then
+  echo "Missing systemd. Cancel!"
+  exit 1
+fi
+
+
+
 export old='`pwd`'
 export RDIR='/usr/share/ramdisk'
 echo -n "Where to install [`echo $RDIR`]: "
