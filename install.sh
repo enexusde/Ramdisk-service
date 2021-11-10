@@ -8,11 +8,15 @@ if [ "$dir" != "" ] ;then
 fi
 
 if [ -d "$RDIR" ]; then
-  echo "Directory already exists! Cancel"
+  echo "Directory already exists. Cancel!"
   exit 1
 fi
+
+echo -n "How many gigabyte you like the ramdisk to be?: "
+read sizegb
+
 mkdir $RDIR
-cp * $RDIR
+cp -rf * $RDIR
 cd $RDIR
 sudo chmod +x createramdisk openramdisk closeramdisk deleteramdisk
 sudo ./createramdisk
