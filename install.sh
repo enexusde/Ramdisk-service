@@ -19,6 +19,10 @@ if [ -d "$RDIR" ]; then
   if [ "$deleterds" != "y" ] ;then
     rm -rf $RDIR
     rm /etc/systemd/system/ramdisk.service
+    echo "Ramdisk service removed. Exit."
+    exit 0
+  else
+    echo "Not removed. Nothing to do. Cancel."
   fi  
   exit 1
 fi
